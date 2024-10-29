@@ -1,0 +1,18 @@
+## an enable script
+
+export DSBOOK=~/dsbook # or whatever directory you chose
+
+export PATH=$DSBOOK/bin:\
+/usr/bin:\
+/bin:\
+/usr/sbin:\
+/sbin
+
+## specify any aliases you need 
+## you may need to use alias things in /usr/local/bin if they are not project specific
+alias code=/usr/local/bin/code
+
+
+## notes go here in comments
+
+

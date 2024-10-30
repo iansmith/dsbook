@@ -5,6 +5,13 @@
 <meta name="theme-color" media="(prefers-color-scheme: dark)" content="#343a40">
 <meta name="color-scheme" content="light dark">
 
+{{ with resources.Get "js/copybutton.js" }}
+    {{ $minifiedScript := . | minify | fingerprint }}
+    <script src="{{ $minifiedScript.Permalink }}" integrity="{{ $minifiedScript.Data.Integrity }}" defer></script>
+{{ else }}
+    {{ errorf "copybutton.js not found in assets/js/" }}
+{{ end }}
+
 {{- with .Page.Params.BookHref -}}
   <meta http-equiv="Refresh" content="0; url='{{ . }}'" />
 {{- end -}}

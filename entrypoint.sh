@@ -22,6 +22,8 @@ chmod 400 $HOME/.ssh/id_rsa
 echo '=================== Make git comfortable ==================='
 git config --global --add safe.directory /github/workspace
 git config --global init.defaultBranch master
+git submodule add https://github.com/alex-shpak/hugo-book themes/hugo-book
+
 #which node
 echo '=================== Build site ==================='
 HUGO_ENV=production hugo --logLevel debug --minify -d public --cleanDestinationDir

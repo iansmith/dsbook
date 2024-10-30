@@ -19,7 +19,7 @@ echo '=================== Create deploy key to push ==================='
 echo '=================== Make git comfortable ==================='
 git config --global --add safe.directory /github/workspace
 git config --global init.defaultBranch master
-which node
+#which node
 echo '=================== Build site ==================='
 HUGO_ENV=production hugo --logLevel debug --minify -d public --cleanDestinationDir
 echo '=================== Publish to GitHub Pages ==================='

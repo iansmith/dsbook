@@ -64,7 +64,9 @@ command above _including the dollar sign_.  This is unfortunate, but it is custo
 to use the '$' to indicate a shell prompt;  you do not want to copy and then
 paste the text of a command like that _with the dollar sign included_.  
 
-<---> {{ /* magic separator, between columns  */ }} -->
+{{% /hint %}}
+
+<---> {{ /* magic separator, between columns  */ }} 
 
 Not-very-pro-tip:
 In whatever shell you are going to be pasting into, type "echo "  (with the space)
@@ -75,7 +77,7 @@ screen and then you are free to copy again or edit however you want.
 {{% /sidebar %}}
 {{% /columns %}}
 
- {{ /* NEXT CHUNK */ }}  
+{{ /* NEXT CHUNK */ }}  
 {{% columns ratio="3:1" %}} {{ /* begin columns block */ }}  
 
 Go into the newly created directory (which, in this book, means `cd ~/dsbook`) and create
@@ -93,7 +95,7 @@ people's editors.
 {{% /sidebar %}}
 {{% /columns %}}
 
-{{ /*  NEXT CHUNK  */ }}-->
+{{ /*  NEXT CHUNK  */ }}
 
 {{% columns ratio="3:1" %}} {{ /* begin columns block */ }}  
 

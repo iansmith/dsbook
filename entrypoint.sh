@@ -12,10 +12,10 @@ echo '=================== Create deploy key to push ==================='
 # whoami
 # pwd
 # echo $HOME
-# mkdir $HOME/.ssh
-# ssh-keyscan -t rsa github.com > $HOME/.ssh/known_hosts && \
-# echo "${GIT_DEPLOY_KEY}" > $HOME/.ssh/id_rsa && \
-# chmod 400 $HOME/.ssh/id_rsa
+mkdir $HOME/.ssh
+ssh-keyscan -t rsa github.com > $HOME/.ssh/known_hosts && \
+echo "${GIT_DEPLOY_KEY}" > $HOME/.ssh/id_rsa && \
+chmod 400 $HOME/.ssh/id_rsa
 echo '=================== Make git comfortable ==================='
 git config --global --add safe.directory /github/workspace
 git config --global init.defaultBranch master

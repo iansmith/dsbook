@@ -1,0 +1,15 @@
+{
+  "name": "",
+  "short_name": "",
+  "start_url": "/dsbook/",
+  "scope": "/dsbook/",
+  "display": "standalone",
+  "background_color": "#000000",
+  "theme_color": "#000000",
+  "icons": [
+    {
+      "src": "/dsbook/favicon.svg",
+      "sizes": "512x512"
+    }
+  ]
+}

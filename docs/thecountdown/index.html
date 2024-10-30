@@ -1,0 +1,69 @@
+<!doctype html><html lang=en dir=ltr><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content='
+  Lesson 2: The Countdown
+  #
+
+When you are giving a presentation you probably want to how much time you
+have left for speaking!
+We are going to add a countdown timer to the clock we built in the last lesson.
+Again, this will be much smaller in the final UI but we&rsquo;re going to leave it
+big for one last lesson.
+We are going to:
+
+Add a countdown timer to the display, that when engaged can start a countdown
+of 30 mins.
+Take in/send out the store values using a type PatchStore.
+
+
+  Exercises
+  #
+
+
+Adapt the countdown timer so that can be initialized to 60, 45, 30, 20 or 5 mins.
+
+Click on the countdown timer to set it for 40 mins, the next click is 30, etc.
+After you do a click, the timer begins immediately counting down. So,
+the click is both a way to change the amount of time and a reset.
+
+
+
+
+  For the truly gung-ho (advanced exercises; we don&rsquo;t provide the answers)
+  #
+
+* Take the existing timer code and use it to create the digital equivalent of 
+    a flyback stopwatch.  
+    * A click causes the countdown timer to stop but the time keeps advancing normally.
+        A second click causes the countdown timer to "flyback" to "now" and update
+        accordingly. 
+* Cause a "screen-wide" warning to flash when the countdown time reaches
+    5 min and 1min.  
+    * At zero mins remaining the timer and clock should both disappear.
+* [Hard] Change the display  to the show the time as if on
+    an analog clock.  This requires either some skill with graphics or
+    trigonemetry/matrices or both.
+'><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><script src=https://iansmith.github.io/dsbook/js/copybutton.min.d238cbcc2329139e593fcbafacddeb7ad985f9a697d90c34931c10bc221b23bc.js integrity="sha256-0jjLzCMpE55ZP8uvrN3retmF+aaX2Qw0kxwQvCIbI7w=" defer></script><meta property="og:url" content="https://iansmith.github.io/dsbook/docs/thecountdown/"><meta property="og:title" content="(02) The Countdown"><meta property="og:description" content='Lesson 2: The Countdown # When you are giving a presentation you probably want to how much time you have left for speaking!
+We are going to add a countdown timer to the clock we built in the last lesson. Again, this will be much smaller in the final UI but we’re going to leave it big for one last lesson.
+We are going to:
+Add a countdown timer to the display, that when engaged can start a countdown of 30 mins. Take in/send out the store values using a type PatchStore. Exercises # Adapt the countdown timer so that can be initialized to 60, 45, 30, 20 or 5 mins. Click on the countdown timer to set it for 40 mins, the next click is 30, etc. After you do a click, the timer begins immediately counting down. So, the click is both a way to change the amount of time and a reset. For the truly gung-ho (advanced exercises; we don’t provide the answers) # * Take the existing timer code and use it to create the digital equivalent of a flyback stopwatch. * A click causes the countdown timer to stop but the time keeps advancing normally. A second click causes the countdown timer to "flyback" to "now" and update accordingly. * Cause a "screen-wide" warning to flash when the countdown time reaches 5 min and 1min. * At zero mins remaining the timer and clock should both disappear. * [Hard] Change the display to the show the time as if on an analog clock. This requires either some skill with graphics or trigonemetry/matrices or both.'><meta property="og:locale" content="en"><meta property="og:type" content="website"><title>(02) The Countdown | </title><link rel=icon href=/dsbook/favicon.png><link rel=stylesheet href=/dsbook/css/dsbook.css><link rel=manifest href=/dsbook/manifest.json><link rel=canonical href=https://iansmith.github.io/dsbook/docs/thecountdown/><link rel=stylesheet href=/dsbook/book.min.434035e7885c7f5d12818bd9f111cf1a0925c6fb78382667381c3d5eda3fb4f1.css integrity="sha256-Q0A154hcf10SgYvZ8RHPGgklxvt4OCZnOBw9Xto/tPE=" crossorigin=anonymous><script defer src=/dsbook/fuse.min.js></script><script defer src=/dsbook/en.search.min.f9b89a06ea4acc525f8d4ecde1a9cb6e8f0df71edc93e3e687518fc89365631e.js integrity="sha256-+biaBupKzFJfjU7N4anLbo8N9x7ck+Pmh1GPyJNlYx4=" crossorigin=anonymous></script><link rel=alternate type=application/rss+xml href=https://iansmith.github.io/dsbook/docs/thecountdown/index.xml title></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/dsbook/><span></span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li><a href=/dsbook/docs/thesetup/>(00) The Setup</a><ul><li><a href=/dsbook/docs/thesetup/preface/>Preface</a></li><li><a href=/dsbook/docs/thesetup/who-should-be-reading-this-book/>Who Should Be Reading This Book</a></li><li><a href=/dsbook/docs/thesetup/enable-script/>The Enable Script</a></li><li><a href=/dsbook/docs/thesetup/tooling/>Tooling</a></li></ul></li><li><a href=/dsbook/docs/theclock/>(01) The Clock</a><ul></ul></li><li><a href=/dsbook/docs/thecountdown/ class=active>(02) The Countdown</a><ul></ul></li><li><a href=/dsbook/docs/thetemple/>(03) The Temple Of Templ</a><ul></ul></li><li><a href=/dsbook/docs/markdown/>(04) Markdown</a><ul></ul></li><li><a href=/dsbook/docs/nats/>(05) NATS Receiving</a><ul></ul></li><li><a href=/dsbook/docs/slides/>(06) NATS Sending... And Slides!</a><ul></ul></li><li><a href=/dsbook/docs/microlith/>(07) The Microlith Architecture</a><ul></ul></li><li><a href=/dsbook/docs/tests/>(08) Testing</a><ul></ul></li><li><a href=/dsbook/docs/thewatchers/>(09) The Watchers</a><ul></ul></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/dsbook/svg/menu.svg class=book-icon alt=Menu></label><h3>(02) The Countdown</h3><label for=toc-control></label></div></header><article class="markdown book-article"><h1 id=lesson-2-the-countdown>Lesson 2: The Countdown
+<a class=anchor href=#lesson-2-the-countdown>#</a></h1><p>When you are giving a presentation you probably want to how much time you
+have left for speaking!</p><p>We are going to add a countdown timer to the clock we built in the last lesson.
+Again, this will be much smaller in the final UI but we&rsquo;re going to leave it
+big for one last lesson.</p><p>We are going to:</p><ul><li>Add a countdown timer to the display, that when engaged can start a countdown
+of 30 mins.</li><li>Take in/send out the store values using a type <code>PatchStore</code>.</li></ul><h2 id=exercises>Exercises
+<a class=anchor href=#exercises>#</a></h2><ul><li>Adapt the countdown timer so that can be initialized to 60, 45, 30, 20 or 5 mins.<ul><li>Click on the countdown timer to set it for 40 mins, the next click is 30, etc.
+After you do a click, the timer begins immediately counting down. So,
+the click is both a way to change the amount of time <em>and</em> a reset.</li></ul></li></ul><h3 id=for-the-truly-gung-ho-advanced-exercises-we-dont-provide-the-answers>For the truly gung-ho (advanced exercises; we don&rsquo;t provide the answers)
+<a class=anchor href=#for-the-truly-gung-ho-advanced-exercises-we-dont-provide-the-answers>#</a></h3><pre><code>* Take the existing timer code and use it to create the digital equivalent of 
+    a flyback stopwatch.  
+    * A click causes the countdown timer to stop but the time keeps advancing normally.
+        A second click causes the countdown timer to &quot;flyback&quot; to &quot;now&quot; and update
+        accordingly. 
+* Cause a &quot;screen-wide&quot; warning to flash when the countdown time reaches
+    5 min and 1min.  
+    * At zero mins remaining the timer and clock should both disappear.
+* [Hard] Change the display  to the show the time as if on
+    an analog clock.  This requires either some skill with graphics or
+    trigonemetry/matrices or both.
+</code></pre></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/iansmith/dsbook/commit/d6a544f900883f26bf0c40c1d24535767f6fb2ce title='Last modified by Ian Smith | October 30, 2024' target=_blank rel=noopener><img src=/dsbook/svg/calendar.svg class=book-icon alt>
+<span>October 30, 2024</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div></main></body></html>

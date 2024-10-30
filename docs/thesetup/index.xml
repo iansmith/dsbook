@@ -1,0 +1,89 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>(00) The Setup on</title><link>https://iansmith.github.io/dsbook/docs/thesetup/</link><description>Recent content in (00) The Setup on</description><generator>Hugo</generator><language>en</language><atom:link href="https://iansmith.github.io/dsbook/docs/thesetup/index.xml" rel="self" type="application/rss+xml"/><item><title/><link>https://iansmith.github.io/dsbook/docs/thesetup/preface/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://iansmith.github.io/dsbook/docs/thesetup/preface/</guid><description>&lt;h1 id="preface">
+ Preface
+ &lt;a class="anchor" href="#preface">#&lt;/a>
+&lt;/h1>
+&lt;div class="book-columns flex flex-wrap">
+&lt;div class="flex-even markdown-inner" style="flex-grow: 3;">
+ &lt;!-- begin columns block -->
+&lt;h2 id="in-the-beginning">
+ In The Beginning
+ &lt;a class="anchor" href="#in-the-beginning">#&lt;/a>
+&lt;/h2>
+&lt;blockquote>
+&lt;p>In the beginning there was nothing, not even time. &lt;br/>
+No planets, no stars, no hip-hop, no rhyme. &lt;/br>
+But there was a bang like the sound of my gat, &lt;br/>
+The universe began and the sh&amp;ndash; was phat.&lt;br/>
+&amp;mdash;&lt;em>MC Hawking&lt;/em>&lt;/p>
+&lt;/blockquote>
+ &lt;/div>
+&lt;div class="flex-even markdown-inner" style="flex-grow: 1;">
+ &lt;!-- magic separator, between columns -->
+&lt;div style="margin: 0px; vertical-align: bottom; margin:0px;">
+ &lt;span class="sidebar" style="display:inline-block; margin:0px;"> &lt;p>&lt;a href="https://music.apple.com/us/artist/m-c-hawking/31738499">M.C.&lt;/a> &lt;a href="https://en.wikipedia.org/wiki/MC_Hawking">Hawking&lt;/a>&lt;/p></description></item><item><title>Who Should Be Reading This Book</title><link>https://iansmith.github.io/dsbook/docs/thesetup/who-should-be-reading-this-book/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://iansmith.github.io/dsbook/docs/thesetup/who-should-be-reading-this-book/</guid><description>&lt;h1 id="who-should-be-reading-this-book">
+ Who Should Be Reading This Book
+ &lt;a class="anchor" href="#who-should-be-reading-this-book">#&lt;/a>
+&lt;/h1>
+&lt;h2 id="our-target">
+ Our target
+ &lt;a class="anchor" href="#our-target">#&lt;/a>
+&lt;/h2>
+&lt;div class="book-columns flex flex-wrap">
+&lt;div class="flex-even markdown-inner" style="flex-grow: 3;">
+&lt;p>When started, this effort had the vague and ill-formed idea that you, our reader, would be somebody who
+understands how the web works and knows how to program in go. If that sounds
+like you, you can go to the fridge and get a snack.&lt;/p>
+ &lt;/div>
+&lt;div class="flex-even markdown-inner" style="flex-grow: 1;">
+&lt;div style="margin: 0px; vertical-align: bottom; margin:0px;">
+ &lt;span class="sidebar" style="display:inline-block; margin:0px;"> &lt;p>Bring us a &lt;em>cold&lt;/em> beer, if you got one to spare.&lt;/p></description></item><item><title>The Enable Script</title><link>https://iansmith.github.io/dsbook/docs/thesetup/enable-script/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://iansmith.github.io/dsbook/docs/thesetup/enable-script/</guid><description>&lt;div class="book-columns flex flex-wrap">
+&lt;div class="flex-even markdown-inner" style="flex-grow: 3;">
+&lt;h1 id="the-enable-script">
+ The Enable Script
+ &lt;a class="anchor" href="#the-enable-script">#&lt;/a>
+&lt;/h1>
+&lt;p>An enable script is a quite a specific shell script. It&amp;rsquo;s purpose is to be
+put into your current shell&amp;rsquo;s environment with &lt;code>source&lt;/code> and have that shell
+be &amp;ldquo;ready&amp;rdquo; for development work. If you are not familiar with building
+shell scripts (or simply despise them for all the obvious reasons), this
+script is going to be so simple that it can easily be your first.&lt;/p></description></item><item><title/><link>https://iansmith.github.io/dsbook/docs/thesetup/tooling/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://iansmith.github.io/dsbook/docs/thesetup/tooling/</guid><description>&lt;h2 id="a-brief-explanation-of-our-tooling">
+ A brief explanation of our tooling
+ &lt;a class="anchor" href="#a-brief-explanation-of-our-tooling">#&lt;/a>
+&lt;/h2>
+&lt;ul>
+&lt;li>Short descriptions of the &lt;em>function&lt;/em> of the tools not about the details
+of the commands, input, etc.&lt;/li>
+&lt;/ul>
+&lt;h3 id="golang">
+ golang
+ &lt;a class="anchor" href="#golang">#&lt;/a>
+&lt;/h3>
+&lt;h3 id="templ">
+ templ
+ &lt;a class="anchor" href="#templ">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>Again, focus on the simplicity, particularly of mixing in go code.
+** Maybe concede that sending server values to the javascript side is awkward&lt;/li>
+&lt;/ul>
+&lt;h3 id="nats-event-bus">
+ nats event bus
+ &lt;a class="anchor" href="#nats-event-bus">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>I got the embedded version of this worikng. Sweet.&lt;/li>
+&lt;/ul>
+&lt;h3 id="tailwind">
+ tailwind?
+ &lt;a class="anchor" href="#tailwind">#&lt;/a>
+&lt;/h3>
+&lt;ul>
+&lt;li>I was planning to some minimal styling of the app using tailwind&lt;/li>
+&lt;li>Part of this was so we can solicit PRs from the community and maybe
+somebody will do some nice design for us.&lt;/li>
+&lt;/ul>
+&lt;h3 id="git">
+ git?
+ &lt;a class="anchor" href="#git">#&lt;/a>
+&lt;/h3>
+&lt;p>Is this &lt;em>like duh&lt;/em>?&lt;/p></description></item></channel></rss>

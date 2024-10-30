@@ -1,0 +1,94 @@
+<!doctype html><html lang=en dir=ltr><head><meta charset=UTF-8><meta name=viewport content="width=device-width,initial-scale=1"><meta name=description content="
+
+
+  The Enable Script
+  #
+
+An enable script is a quite a specific shell script.  It&rsquo;s purpose is to be
+put into your current shell&rsquo;s environment with source and have that shell
+be &ldquo;ready&rdquo; for development work.   If you are not familiar with building
+shell scripts (or simply despise them for all the obvious reasons), this
+script is going to be so simple that it can easily be your first."><meta name=theme-color media="(prefers-color-scheme: light)" content="#ffffff"><meta name=theme-color media="(prefers-color-scheme: dark)" content="#343a40"><meta name=color-scheme content="light dark"><script src=https://iansmith.github.io/dsbook/js/copybutton.min.d238cbcc2329139e593fcbafacddeb7ad985f9a697d90c34931c10bc221b23bc.js integrity="sha256-0jjLzCMpE55ZP8uvrN3retmF+aaX2Qw0kxwQvCIbI7w=" defer></script><meta property="og:url" content="https://iansmith.github.io/dsbook/docs/thesetup/enable-script/"><meta property="og:title" content="The Enable Script"><meta property="og:description" content="The Enable Script # An enable script is a quite a specific shell script. It’s purpose is to be put into your current shell’s environment with source and have that shell be “ready” for development work. If you are not familiar with building shell scripts (or simply despise them for all the obvious reasons), this script is going to be so simple that it can easily be your first."><meta property="og:locale" content="en"><meta property="og:type" content="article"><meta property="article:section" content="docs"><meta property="article:modified_time" content="2024-10-30T17:15:31-04:00"><title>The Enable Script | </title><link rel=icon href=/dsbook/favicon.png><link rel=stylesheet href=/dsbook/css/dsbook.css><link rel=manifest href=/dsbook/manifest.json><link rel=canonical href=https://iansmith.github.io/dsbook/docs/thesetup/enable-script/><link rel=stylesheet href=/dsbook/book.min.434035e7885c7f5d12818bd9f111cf1a0925c6fb78382667381c3d5eda3fb4f1.css integrity="sha256-Q0A154hcf10SgYvZ8RHPGgklxvt4OCZnOBw9Xto/tPE=" crossorigin=anonymous><script defer src=/dsbook/fuse.min.js></script><script defer src=/dsbook/en.search.min.f9b89a06ea4acc525f8d4ecde1a9cb6e8f0df71edc93e3e687518fc89365631e.js integrity="sha256-+biaBupKzFJfjU7N4anLbo8N9x7ck+Pmh1GPyJNlYx4=" crossorigin=anonymous></script></head><body dir=ltr><input type=checkbox class="hidden toggle" id=menu-control>
+<input type=checkbox class="hidden toggle" id=toc-control><main class="container flex"><aside class=book-menu><div class=book-menu-content><nav><h2 class=book-brand><a class="flex align-center" href=/dsbook/><span></span></a></h2><div class="book-search hidden"><input type=text id=book-search-input placeholder=Search aria-label=Search maxlength=64 data-hotkeys=s/><div class="book-search-spinner hidden"></div><ul id=book-search-results></ul></div><script>document.querySelector(".book-search").classList.remove("hidden")</script><ul><li><a href=/dsbook/docs/thesetup/>(00) The Setup</a><ul><li><a href=/dsbook/docs/thesetup/preface/>Preface</a></li><li><a href=/dsbook/docs/thesetup/who-should-be-reading-this-book/>Who Should Be Reading This Book</a></li><li><a href=/dsbook/docs/thesetup/enable-script/ class=active>The Enable Script</a></li><li><a href=/dsbook/docs/thesetup/tooling/>Tooling</a></li></ul></li><li><a href=/dsbook/docs/theclock/>(01) The Clock</a><ul></ul></li><li><a href=/dsbook/docs/thecountdown/>(02) The Countdown</a><ul></ul></li><li><a href=/dsbook/docs/thetemple/>(03) The Temple Of Templ</a><ul></ul></li><li><a href=/dsbook/docs/markdown/>(04) Markdown</a><ul></ul></li><li><a href=/dsbook/docs/nats/>(05) NATS Receiving</a><ul></ul></li><li><a href=/dsbook/docs/slides/>(06) NATS Sending... And Slides!</a><ul></ul></li><li><a href=/dsbook/docs/microlith/>(07) The Microlith Architecture</a><ul></ul></li><li><a href=/dsbook/docs/tests/>(08) Testing</a><ul></ul></li><li><a href=/dsbook/docs/thewatchers/>(09) The Watchers</a><ul></ul></li></ul></nav><script>(function(){var e=document.querySelector("aside .book-menu-content");addEventListener("beforeunload",function(){localStorage.setItem("menu.scrollTop",e.scrollTop)}),e.scrollTop=localStorage.getItem("menu.scrollTop")})()</script></div></aside><div class=book-page><header class=book-header><div class="flex align-center justify-between"><label for=menu-control><img src=/dsbook/svg/menu.svg class=book-icon alt=Menu></label><h3>The Enable Script</h3><label for=toc-control></label></div></header><article class="markdown book-article"><div class="book-columns flex flex-wrap"><div class="flex-even markdown-inner" style=flex-grow:3><h1 id=the-enable-script>The Enable Script
+<a class=anchor href=#the-enable-script>#</a></h1><p>An enable script is a quite a specific shell script. It&rsquo;s purpose is to be
+put into your current shell&rsquo;s environment with <code>source</code> and have that shell
+be &ldquo;ready&rdquo; for development work. If you are not familiar with building
+shell scripts (or simply despise them for all the obvious reasons), this
+script is going to be so simple that it can easily be your first.</p></div><div class="flex-even markdown-inner" style=flex-grow:1><div style=margin:0;vertical-align:bottom;margin:0><span class=sidebar style=display:inline-block;margin:0><p>One of the authors (iansmith) learned this technique in 1991 and it was noted
+at that time by his colleagues that this technique was &ldquo;old&rdquo; then.</p></span></div></div></div><div class="book-columns flex flex-wrap"><div class="flex-even markdown-inner" style=flex-grow:3><p>We are guessing that many readers are thinking, &ldquo;I know how to use the shell,
+I don&rsquo;t need this.&rdquo; This technique rewards study. Be sure you understand the
+idea and the practice of the enable script before you decide to skip this bit.
+We are going to use it throughout this book. There are number of both common
+and unusual problems that the enable script technique avoids.</p></div><div class="flex-even markdown-inner" style=flex-grow:1><div style=margin:0;vertical-align:bottom;margin:0><span class=sidebar style=display:inline-block;margin:0><p>Many of these problems seem to occur the night before a big demo. At such times
+you&rsquo;re under pressure and not as careful as you might otherwise be.</p></span></div></div></div><div class="book-columns flex flex-wrap"><div class="flex-even markdown-inner" style=flex-grow:3><h3 id=your-dsbook-dir>Your DSBOOK dir
+<a class=anchor href=#your-dsbook-dir>#</a></h3><p>In this book, we will assume you have created a directory that we will refer
+to as your <code>DSBOOK</code> directory. A good choice for this is <code>~/dsbook</code> but you can
+choose what you like. We&rsquo;ll use a code block like the one below to indicate
+one or more commands you should run from the command line.</p><p>Go ahead and create the <code>DSBOOK</code> directory with:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=display:flex><span>$ mkdir ~/dsbook
+</span></span></code></pre></div><blockquote class="book-hint info"><p>The &ldquo;copy code&rdquo; button on this website will copy all the text in that one line
+command above <em>including the dollar sign</em>. This is unfortunate, but it is customary
+to use the &lsquo;$&rsquo; to indicate a shell prompt; you do not want to copy and then
+paste the text of a command like that <em>with the dollar sign included</em>.</p></blockquote></div><div class="flex-even markdown-inner" style=flex-grow:1><p>Not-very-pro-tip:
+In whatever shell you are going to be pasting into, type &ldquo;echo " (with the space)
+first <em>then</em> paste and hit return. That just harmlessly copies the text to the
+screen and then you are free to copy again or edit however you want.</p><div style=margin:0;vertical-align:bottom;margin:0><span class=sidebar style=display:inline-block;margin:0></span></div></div></div><div class="book-columns flex flex-wrap"><div class="flex-even markdown-inner" style=flex-grow:3><p>Go into the newly created directory (which, in this book, means <code>cd ~/dsbook</code>) and create
+the first version of your enable script. It is recommend you use the convention of making the
+enable script for a project <code>foo</code> be <code>enable-foo</code>. In this case you should
+open your editor on <code>~/dsbook/enable-dsbook</code> and enter this content:</p><div class=book-tabs><input type=radio class=toggle name=tabs-0 id=tabs-0-0 checked>
+<label for=tabs-0-0>MacOS</label><div class="book-tabs-content markdown-inner"><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=display:flex><span><span style=color:#75715e>## an enable script</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>export DSBOOK<span style=color:#f92672>=</span>~/dsbook <span style=color:#75715e># or whatever directory you chose</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>export PATH<span style=color:#f92672>=</span>$DSBOOK/bin:<span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>/usr/bin:<span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>/bin:<span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>/usr/sbin:<span style=color:#ae81ff>\
+</span></span></span><span style=display:flex><span><span style=color:#ae81ff></span>/sbin
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## Specify any aliases you need </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## You may need to use aliases for things in /usr/local/bin if </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## they are *NOT* project specific!</span>
+</span></span><span style=display:flex><span>alias code<span style=color:#f92672>=</span>/usr/local/bin/code
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## Don&#39;t be afraid to delete aliases or unset environment vars </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## that you are sure other projects you work on ... this script </span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## is for just dsbook.</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## Secrets</span>
+</span></span><span style=display:flex><span>
+</span></span><span style=display:flex><span><span style=color:#75715e>## Notes </span></span></span></code></pre></div></div><input type=radio class=toggle name=tabs-0 id=tabs-0-1>
+<label for=tabs-0-1>Linux</label><div class="book-tabs-content markdown-inner"><h4 id=linux-content-goes-here>Linux content goes here
+<a class=anchor href=#linux-content-goes-here>#</a></h4></div><input type=radio class=toggle name=tabs-0 id=tabs-0-2>
+<label for=tabs-0-2>Windows</label><div class="book-tabs-content markdown-inner"><h4 id=windows-content-goes-here>Windows content goes here
+<a class=anchor href=#windows-content-goes-here>#</a></h4></div></div></div><div class="flex-even markdown-inner" style=flex-grow:1><div style=margin:0;vertical-align:bottom;margin:0><span class=sidebar style=display:inline-block;margin:0><blockquote><p>Please! Gentlemen! You cannot fight here! This is the war room! &ndash; from Dr. Strangelove.</p></blockquote><p>We are perfectly cool with it though, if you want to throw shade at other
+people&rsquo;s editors. We like that.</p></span></div></div></div><div class="book-columns flex flex-wrap"><div class="flex-even markdown-inner" style=flex-grow:3><p>We are quite sure that some readers are fuming about the <code>PATH</code> variable in this
+script and how minimal it is. This is by design and is set to this &ldquo;tiny&rdquo; value
+in an effort to make sure that anything that ends up in your <code>PATH</code> is done
+consciously. If you &ldquo;get lucky&rdquo; that you find some tool in your <code>PATH</code> via
+<code>/usr/local/bin</code> or similar, you are likely to get &ldquo;unlucky&rdquo; at some point later
+when some future version of you deletes the tool or upgrades the tool to a
+no-longer-compatible version.</p></div><div class="flex-even markdown-inner" style=flex-grow:1><div style=margin:0;vertical-align:bottom;margin:0><span class=sidebar style=display:inline-block;margin:0><p>&ldquo;How can I possibly be expected to do anything even minimally useful with
+a <code>PATH</code> like that?!?&rdquo;</p></span></div></div></div><div class="book-columns flex flex-wrap"><div class="flex-even markdown-inner" style=flex-grow:3><h3 id=idempotency>Idempotency
+<a class=anchor href=#idempotency>#</a></h3><p>Your enable script should be idempotent so you can run whenver you want. If
+you have any shell and you cd into a project dir like <code>foo</code> then the script
+<code>enable-foo</code> should be there and you can use <code>source enable-foo</code> to get that
+shell prepared for work on <code>foo</code>.</p></div><div class="flex-even markdown-inner" style=flex-grow:1><div style=margin:0;vertical-align:bottom;margin:0><span class=sidebar style=display:inline-block;margin:0><p>Before you ask and embarass yourself: Idempotency is the property of an operation
+that can be applied multiple times without changing the result beyond the initial
+execution. You can safely run an &ldquo;idempotent operation&rdquo; multiple times without
+side effects, such as duplicates or inconsistency of data.</p></span></div></div></div><div class="book-columns flex flex-wrap"><div class="flex-even markdown-inner" style=flex-grow:3><h3 id=about-the-future>About The Future
+<a class=anchor href=#about-the-future>#</a></h3><p>At various upcoming points in the book we&rsquo;re going to suggest that you add
+things to your enable script. Some examples of things that we&rsquo;ll be adding
+are:</p><ul><li>Explicit versioning of dependencies for command line programs</li><li>Secrets. The <code>DSBOOK</code> directory is the parent of what is going to be
+source code directory and that directory will have an associated git
+repository. So, you can safely put secret things, like API keys or
+encryption keys, in the enable script because it won&rsquo;t be checked in.</li><li>Notes. A common use of the enable-script, since it is personal to the owner
+unlike thinngs in a repository, is to put comments in the enable script
+to keep track of long, complex, or infrequently used commands.</li></ul><p>An example note:</p><div class=highlight><pre tabindex=0 style=color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4><code class=language-sh data-lang=sh><span style=display:flex><span><span style=color:#75715e># to run the database consistency check use this (for today -&gt; yesterday)</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># you can use dates if you want to but they have to prefixed by -- and </span>
+</span></span><span style=display:flex><span><span style=color:#75715e># in the format YYYY-MM-DD.</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># ENV=PROD db-check consistency-external --today --yesterday</span>
+</span></span><span style=display:flex><span><span style=color:#75715e># ENV=PROD db-check consistency-external --today --2024-10-01</span>
+</span></span></code></pre></div></div><div class="flex-even markdown-inner" style=flex-grow:1><div style=margin:0;vertical-align:bottom;margin:0><span class=sidebar style=display:inline-block;margin:0><p>Using environment variables instead of other means of parameter passing is
+<a href=https://12factor.net>12 factorish</a>.</p></span></div></div></div></article><footer class=book-footer><div class="flex flex-wrap justify-between"><div><a class="flex align-center" href=https://github.com/iansmith/dsbook/commit/d6a544f900883f26bf0c40c1d24535767f6fb2ce title='Last modified by Ian Smith | October 30, 2024' target=_blank rel=noopener><img src=/dsbook/svg/calendar.svg class=book-icon alt>
+<span>October 30, 2024</span></a></div></div><script>(function(){function e(e){const t=window.getSelection(),n=document.createRange();n.selectNodeContents(e),t.removeAllRanges(),t.addRange(n)}document.querySelectorAll("pre code").forEach(t=>{t.addEventListener("click",function(){if(window.getSelection().toString())return;e(t.parentElement),navigator.clipboard&&navigator.clipboard.writeText(t.parentElement.textContent)})})})()</script></footer><div class=book-comments></div><label for=menu-control class="hidden book-menu-overlay"></label></div></main></body></html>

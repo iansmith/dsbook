@@ -3,6 +3,8 @@ Title = '(07) The Microlith Architecture'
 weight = 700
 +++
 
+## The Microlith Architecture
+
 This lesson is just an essay and the reader could skip it if they want.
 
 The readers at this point should understand enough to see the microlith 

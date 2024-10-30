@@ -3,6 +3,8 @@ Title = '(06) NATS Sending... And Slides!'
 weight = 600
 +++
 
+## Displaying Slides
+
 This version will show the golang api to sending on a subject.  Naturally,
 I plan to use my type-safe versions to make this easier.
 

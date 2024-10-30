@@ -1,18 +1,18 @@
 +++
-weight = 7
+weight = 20
+Title = 'Who Should Be Reading This Book'
 +++
 
 # Who Should Be Reading This Book
 
-
 ## Our target
 
-{{% columns ratio="3:1" %}} <!-- begin columns block -->
+{{% columns ratio="3:1" %}} 
 
 When started, this effort had the vague and ill-formed idea that you, our reader, would be somebody who
 understands how the web works and knows how to program in go.  If that sounds
 like you, you can go to the fridge and get a snack.  
-<---> <!-- magic separator, between columns -->
+<--->  
 {{% sidebar %}}
 
 Bring us a _cold_ beer, if you got one to spare.
@@ -21,7 +21,7 @@ Bring us a _cold_ beer, if you got one to spare.
 {{% /columns %}}
 
 
-{{% columns ratio="3:1" %}} <!-- begin columns block -->
+{{% columns ratio="3:1" %}} 
 
 If you would like a bit more specificity related to the web, we assume you 
 understand what _html_ and  _css_ are and what their respective purposes are.   Further, 
@@ -42,20 +42,21 @@ functions, but the authors think that golang is particularly well suited for dat
 
 {{% /hint %}}
 
-<---> <!-- magic separator, between columns -->
+<---> 
 {{% sidebar %}}
 
 Hey, no snarky comments suggesting the purpose of html and css is to torment web
 developers.  *We* get to do the snarky comments around here.
 
 We'd be happy to have a conversation with somebody who wants to create a parallel
-python helpers for datastar.  That would be righteous.
+set python helpers for datastar akin the existing ones for golang.  That would be 
+truly righteous.
 
 {{% /sidebar %}}
 {{% /columns %}}
 
 
-{{% columns ratio="3:1" %}} <!-- begin columns block -->
+{{% columns ratio="3:1" %}} 
 
 Continuing our potentially wrong assumptions, we assume you are familiar how to 
 use command line tools in a unix-ish environment.   For example, we have no plan to explain 
@@ -69,7 +70,7 @@ community and, ultimately, they all do the same thing. Although you may not be
 familiar with the one we are using in these lessons, it is not *that* different
 from whatever you have seen before.
 
-<---> <!-- magic separator, between columns -->
+<---> 
 {{% sidebar %}}
 
 We have no idea about how to do this type of thing in windows with powershell or
@@ -79,58 +80,57 @@ get a pull request from you!
 {{% /sidebar %}}
 {{% /columns %}}
 
-{{% columns ratio="3:1" %}} <!-- begin columns block -->
+{{% columns ratio="3:1" %}} 
 
 The most problematic assumption we have made about our readers that you don't
 have much experience with Javascript---perhaps none.  This is a difficult
 assumption for two reasons:
 
-* People who interested in "front end" or "ui" development today often have a lot of
+* People who are interested in "front end" or "ui" development today often have a lot of
     experience with Javascript;  many even write Javascript for a living. These folks
     with such experience could certainly be interested in how the datastar layer
     works inside the browser or various things you can do to integrate datastar
     on the backend with javascript on the front-end.
 * Readers with little or no javascript experience may find the (ahem) idiosyncratic
-    issues with javascript in a browser more confusing then edifying.  We can't
+    issues with javascript in a browser more confusing than edifying.  We can't
     and won't fit _yet another book_ about Javascript inside this one.
 
-<---> <!-- magic separator, between columns -->
+<---> 
 {{% sidebar %}}
 
 *Snark*: Readers who have no experience with Javascript can consider themselves
 fortunate.
 
-*Snark*: People who have a lot of JS experience *today* can think of that experience
+*Snark*: People who have years  of JS experience *today* can think of that experience
 as better labelled "_pre-Datastar_".
 
 {{% /sidebar %}}
 {{% /columns %}}
 
-
-
-{{% columns ratio="3:1" %}} <!-- begin columns block -->
+{{% columns ratio="3:1" %}} 
 So, the compromise we have reached is to do little, but not no, discussion of 
 Javascript-related issues in Datastar and to pursue them only as they become needed.  
 However, these  will be done with the little "details" box and readers that are
-unfamiliar with Javascript can just leave the little arrow down.
+unfamiliar with Javascript can just leave the little arrow turned to the side
+and be on their merry way.
 
-<---> <!-- magic separator, between columns -->
+<---> 
 {{% sidebar %}}
 {{% /sidebar %}}
 {{% /columns %}}
 
 
-{{% columns ratio="3:1" %}} <!-- begin columns block -->
+{{% columns ratio="3:1" %}} 
 
-Stephen Weinberg, the nobel-prize winning physicist, wrote the excellent,
+Stephen Weinberg, the Nobel-prize winning physicist, wrote the excellent,
 thin volume, [_The First Three Minutes_](https://www.amazon.com/First-Three-Minutes-Modern-Universe/dp/0465024378).
 He said in his introduction that he hoped that he had written a book that any 
 reasonably intelligent individual
 could read and understand without a physics or mathematics background.  He said
-the book didn't more mathematics than multiplication. He may
+the book didn't require more mathematics than multiplication. He may
 have achieved this, but we have no such lofty ambitions.  We're in it for the 
 memes.
-<---> <!-- magic separator, between columns -->
+<---> 
 {{% sidebar %}}
 
 ![xkcd](https://imgs.xkcd.com/comics/alternate_currency.png)

@@ -1,6 +1,7 @@
 ---
 bookFlatSection: false
-Title: The Setup
+Title: '(00) The Setup'
+weight: 001
 ---
 
 # Lesson 0: The Set-Up

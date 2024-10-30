@@ -1,8 +1,10 @@
 +++
-weight = 5
+weight = 10
 +++
 
 # Preface
+
+{{% columns ratio="3:1" %}} <!-- begin columns block -->
 
 ## In The Beginning
 
@@ -12,18 +14,29 @@ weight = 5
 > The universe began and the sh-- was phat.<br/>
 > ---*MC Hawking*
 
+<---> <!-- magic separator, between columns -->
+{{% sidebar %}}
+
+[M.C.](https://music.apple.com/us/artist/m-c-hawking/31738499) [Hawking](https://en.wikipedia.org/wiki/MC_Hawking)
+
+[A Brief History of Rhyme: MC Hawking's Greatest Hits](https://music.apple.com/us/album/a-brief-history-of-rhyme-mc-hawkings-greatest-hits/1321680279)
+
+{{% /sidebar %}}
+{{% /columns %}}
+
+
 {{% columns ratio="3:1" %}} <!-- begin columns block -->
 
 The title of this book is _Simplicity Is A Virtue_ and not only is this claim correct,
 but we will be emphasizing it a great deal in future chapters.  Many books, and 
 countless Ph.D. theses,
-have been written about the bane of software development being complexity.  The positions
-taken and remedies suggested by these authors are all-over-the-map, but it is safe to
+have been written about complexity being the bane of software development.  The positions
+taken and remedies suggested by these many authors are all-over-the-map, but it is safe to
 say that nobody is _in favor of adding complexty._   
 
 <---> <!-- magic separator, between columns -->
 {{% sidebar %}}
-What did Robespierre do related to virtue in the early 1790s? Well, he
+*Snark*:What did Robespierre do related to virtue in the early 1790s? Well, he
 invented an entirely new religion based on _the god of virtue_ and planned to 
 impose it on all of France.  With himself as the high priest, of course.
 Robespierre == DHH?

@@ -8,11 +8,18 @@ export PATH=$DSBOOK/bin:\
 /usr/sbin:\
 /sbin
 
-## specify any aliases you need 
-## you may need to use alias things in /usr/local/bin if they are not project specific
+## Specify any aliases you need 
+## You may need to use aliases for things in /usr/local/bin if 
+## they are *NOT* project specific!
 alias code=/usr/local/bin/code
 
+## Don't be afraid to delete aliases or unset environment vars 
+## that you are sure other projects you work on ... this script 
+## is for just dsbook.
 
-## notes go here in comments
+
+## Secrets
+
+## Notes 
 
 

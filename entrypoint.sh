@@ -22,6 +22,11 @@ chmod 400 $HOME/.ssh/id_rsa
 echo '=================== Make git comfortable ==================='
 git config --global --add safe.directory /github/workspace
 git config --global init.defaultBranch master
+# i hate submodules
+MOD_DIR=themes/hugo-book
+git submodule deinit $MOD_DIR
+git rm $MOD_DIR
+git config -f .gitmodules --remove-section submodule.$MOD_DIR
 git submodule add https://github.com/alex-shpak/hugo-book themes/hugo-book
 
 #which node
